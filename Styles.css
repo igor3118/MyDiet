@@ -3,9 +3,38 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5fdf5; /* Light green for a healthy vibe */
     color: #333;
+    padding-top: 5%;
 }
 /*------------------------------------------------------------------*/
+ul.navbar2 {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    background-color: #388e3c; /* Adjusted to a lighter green for better contrast */
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+ul.navbar2 li {
+    float: left;
+}
+ul.navbar2 li a {
+    display: block;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    }
+ul.navbar2 li a:hover:not(.active) {
+    background-color: #729974;
+    color:white;
+}
 
+ul.navbar2 li a.active {
+    background-color: #04AA6D;
+    color:white;
+}
+/*------------------------------------------------------------------*/
 ul.navbar {
     list-style-type: none;
     margin: 0;
@@ -29,34 +58,7 @@ ul.navbar li a.active {
     color:white;
 }
 /*------------------------------------------------------------------*/
-ul.navbar2 {
-    list-style-type: none;
-    margin: 0;
-    padding:0;
-    overflow: hidden;
-    background-color: #2e7d32;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-li.navbar2 {
-    float: left;
-}
-.navbar2 a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-ul.navbar2 li a:hover:not(.active) {
-    background-color: #729974;
-    color:white;
-}
 
-ul.navbar2 li a.active {
-    background-color: #04AA6D;
-    color:white;
-}
-/*------------------------------------------------------------------*/
 .inicial {
     display: flex;
     justify-content: center;
@@ -70,10 +72,8 @@ ul.navbar2 li a.active {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    width: 20%; 
-    height: 20%;
-    
+    transition: transform 0.3s ease;
+    flex-basis: 20%;
 }
 
 main {
@@ -93,7 +93,7 @@ h1, h2 {
 
 /* Buttons */
 button {
-    background-color: #4caf50;
+    background-color: #2e7d32;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -103,7 +103,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049; /* Slightly lighter green on hover */
+    background-color: #388e3c; /* Darker green for consistency */
 }
 
 /* Forms */
@@ -122,7 +122,7 @@ input, select, textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #81c784; /* Light green for consistency */
     border-radius: 5px;
 }
 
