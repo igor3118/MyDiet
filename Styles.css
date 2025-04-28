@@ -1,139 +1,233 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5fdf5; /* Light green for a healthy vibe */
-    color: #333;
-    padding-top: 5%;
-}
-/*------------------------------------------------------------------*/
-ul.navbar2 {
-    list-style-type: none;
-    margin: 0;
-    padding:0;
-    overflow: hidden;
-    background-color: #388e3c; /* Adjusted to a lighter green for better contrast */
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-ul.navbar2 li {
-    float: left;
-}
-ul.navbar2 li a {
-    display: block;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    }
-ul.navbar2 li a:hover:not(.active) {
-    background-color: #729974;
-    color:white;
+ :root {
+    --cool-gray: #817e9fff;
+    --pistachio: #bcd979ff;
+    --dark-purple: #2d1e2fff;
+    --misty-rose: #fae1dfff;
+    --hunter-green: #315c2bff;
+    --white: #ffffff; 
 }
 
-ul.navbar2 li a.active {
-    background-color: #04AA6D;
-    color:white;
-}
-/*------------------------------------------------------------------*/
-ul.navbar {
-    list-style-type: none;
+* {
+    box-sizing: border-box; 
     margin: 0;
     padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
 }
-ul.navbar li a {
+
+html, body {
+    height: 100%; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: var(--misty-rose); 
+    color: var(--dark-purple); 
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+    line-height: 1.6; 
+}
+
+/* --- Navigation Bar --- */
+header nav ul {
+    list-style-type: none;
+    background-color: var(--hunter-green); 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 0 20px; 
+    align-items: center; 
+    min-height: 60px; 
+}
+
+header nav ul li a {
     display: block;
-    color: #000;
-    padding: 8px 0 8px 16px;
+    color: var(--misty-rose); 
+    padding: 15px 20px; 
     text-decoration: none;
-}
-ul.navbar li a:hover:not(.active) {
-    background-color: #555;
-    color:white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-ul.navbar li a.active {
-    background-color: #04AA6D;
-    color:white;
+header nav ul li a:hover,
+header nav ul li a:focus { 
+    background-color: var(--pistachio); 
+    color: var(--dark-purple); 
+    outline: none; 
 }
-/*------------------------------------------------------------------*/
 
-.inicial {
+/* --- Login Container --- */
+.login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #e8f5e9; /* Light green for a fresh look */
-    color: #2e7d32; /* Dark green for text */
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    flex-basis: 20%;
+    flex-grow: 1; 
+    padding: 40px 20px; 
 }
 
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #ffffff; /* White for readability */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Section Titles */
-h1, h2 {
-    color: #2e7d32; /* Dark green for headings */
-    text-align: center;
-}
-
-/* Buttons */
-button {
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-button:hover {
-    background-color: #388e3c; /* Darker green for consistency */
-}
-
-/* Forms */
-form {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #2e7d32;
-}
-
-input, select, textarea {
+.login-card {
+    background-color: var(--white); 
+    padding: 30px 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 25px rgba(45, 30, 47, 0.15); 
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #81c784; /* Light green for consistency */
-    border-radius: 5px;
+    max-width: 400px; 
+    text-align: center; 
 }
 
-/* Footer */
-footer {
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+/* --- Form Elements --- */
+.login-card h1 {
+    color: var(--hunter-green); 
+    margin-bottom: 25px; 
+    font-size: 2em; 
+}
+
+form label {
+    display: block; 
+    text-align: left; 
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--cool-gray); 
     font-size: 0.9em;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px; 
+    margin-bottom: 20px;
+    border: 1px solid var(--cool-gray); 
+    border-radius: 8px; 
+    font-size: 1em;
+    background-color: var(--misty-rose); 
+    color: var(--dark-purple); 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    outline: none;
+    border-color: var(--pistachio); 
+    box-shadow: 0 0 0 3px rgba(188, 217, 121, 0.3); 
+}
+
+form input[type="submit"] {
+    background-color: var(--hunter-green); 
+    color: var(--misty-rose); 
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em; 
+    font-weight: bold;
+    width: 100%; 
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+    background-color: var(--pistachio); 
+    color: var(--dark-purple);
+    outline: none;
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 10px rgba(45, 30, 47, 0.2);
+}
+
+/* "Forgot password" Link */
+
+.forget-password {
+    margin-top: 15px; 
+    font-size: 0.9em;
+    color: var(--cool-gray); 
+    
+}
+.forget-password a {
+    color: var(--hunter-green); 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.forget-password a:hover,
+.forget-password a:focus {
+    color: var(--pistachio); 
+    text-decoration: underline;
+    outline: none; 
+}
+/* "Don't have an account?" Link */
+.signup-link { 
+    margin-top: 15px; 
+    font-size: 0.9em;
+    color: var(--cool-gray); 
+}
+
+.signup-link a {
+    color: var(--hunter-green); 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover,
+.signup-link a:focus {
+    color: var(--pistachio); 
+    text-decoration: underline;
+    outline: none;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    header nav ul {
+        padding: 0 10px; 
+        min-height: 50px;
+    }
+     header nav ul li a {
+        padding: 12px 15px; 
+    }
+    .login-card {
+        padding: 25px 20px; 
+        margin: 0 10px; 
+    }
+     .login-card h1 {
+        font-size: 1.8em; 
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 15px; 
+    }
+     header nav ul {
+         flex-direction: column; 
+         align-items: stretch; 
+         padding: 0;
+     }
+     header nav ul li {
+         text-align: center; 
+         border-bottom: 1px solid rgba(250, 225, 223, 0.2); 
+     }
+     header nav ul li:last-child {
+         border-bottom: none;
+     }
+      header nav ul li a {
+         padding: 12px 15px;
+     }
+    .login-container {
+        padding: 20px 10px;
+    }
+    .login-card {
+         padding: 20px 15px; 
+         margin: 0 5px;
+    }
+     .login-card h1 {
+        font-size: 1.6em;
+    }
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="submit"] {
+        padding: 10px 12px;
+        font-size: 1em;
+    }
 }

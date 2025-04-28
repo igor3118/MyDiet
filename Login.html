@@ -1,27 +1,36 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="unicode-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <ul class="navbar2">
-                <li style="float:left;"><a href="Index.html">Home</a><br></li>
-                <li style="float:right"><a href="signup">Sign Up</a></li>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
             </ul>
-         </div>
-        <h1>Login</h1>
-        <form action="login" method="post">
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username"><br><br>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password"><br><br>
-            <input type="submit" value="Login">
-        </form>
-        <p>Don't have an account? <a href="signup">Sign Up</a></p>
+         </nav>
     </header>
+
+    <div class="login-container">
+        <div class="login-card">
+            <h1>Login</h1>
+            <form action="login" method="post">
+                <label for="username">Usuário:</label> 
+                <input type="text" id="username" name="username" required> 
+
+                <label for="password">Senha:</label> 
+                <input type="password" id="password" name="password" required> 
+
+                <input type="submit" value="Entrar"> 
+            </form>
+            <p class="forget-password"><a href="forgot-password.htlm">Esqueci minha senha</a></p> 
+            <p class="signup-link">Não tem uma conta? <a href="signup.html">Cadastre-se</a></p> 
+        </div>
+    </div>
 </body>
 </html>
